@@ -20,6 +20,10 @@ The are four important role in a typical GitHub workflow:
 # Let's start
 
 ## 1. Professor create a GitHub storage 
+Visit https://github.com/new, create a new "repository". (It is really just a remote cloud storage that store some txt files)
+
+[](./newrepo.png)
+
 
 ## 2. Students setup their local copy
 
