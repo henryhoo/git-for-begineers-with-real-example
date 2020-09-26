@@ -26,7 +26,7 @@ The are four important role in a typical GitHub workflow:
 
 Visit https://github.com/new, create a new "repository". (What is repository? Just image it as a remote cloud storage that store some txt files)
 
-![](./newrepo.png)
+![](./images/newrepo.png)
 
 
 ## 2. Bob & Tom both setup their local copy
@@ -96,7 +96,7 @@ Date:   Thu Sep 24 22:15:16 2020 -0400
 **Professor:**
 
 Go to home page of the remote repository, click "Add files" -> "Create new file". Add a new file for introduction section of the paper:
-![](./add_introduction.png)
+![](./images/add_introduction.png)
 
 
 ## 4. Bob work on first chapter 
@@ -168,13 +168,54 @@ To https://github.com/henryhoo/Awesome-Paper
  * [new branch]      master -> cp1
 ```
 
-!()[./bob_pull_request.png]
+![](./images/bob_pull_request.png)
 
 ## 6. Professor provide feedback and ask for change 
 
-## 7. Student A fix the typo and update his review request
+Professor check out the request but is not fully satisfied with Bob's work, he provide some feedback in comments
 
-## 8. Professor approved the request and merge Student A's work into GitHub
+![](./images/professor_comment.png)
+
+## 7. Bob make changes based on feedback and his review request
+1. Change `cp1.txt` content to "This is chpater 1"
+2. Run `git commit --amend` to save latest change to current commit
+3. Run `git push` again to update remote branch
+
+**Bob:**
+
+```
+git commit --amend
+git push origin master:cp1
+```
+
+**Example of terminal output**
+```
+jxh@jxh-mbp bob-computer % git commit --amend
+ Date: Sat Sep 26 19:22:49 2020 -0400
+ 1 file changed, 1 insertion(+)
+ create mode 100644 cp1.txt
+jxh@jxh-mbp bob-computer % git push origin master:cp1
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 1.43 KiB | 1.43 MiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0)
+remote:
+remote: Create a pull request for 'cp1' on GitHub by visiting:
+remote:      https://github.com/henryhoo/Awesome-Paper/pull/new/cp1
+remote:
+To https://github.com/henryhoo/Awesome-Paper
+ * [new branch]      master -> cp1
+```
+
+
+## 8. Professor approved the request and merge Bob's work into GitHub
+Professor is happy with Bob's change now, and merged his change to the paper
+![](./images/merged_bob_request.png)
+
+Now the remote repository look like this:
+![](./images/remote_log_after_Bob_first_commit.png)
 
 ## 9. Student B update his localy copy and start to add content to first chapter
 
