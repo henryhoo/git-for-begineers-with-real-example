@@ -3,7 +3,9 @@ The core idea begind git and GitHub isn't that complex. But one of the biggest b
 
 Instead of diving deep into those terms and confuse you with all git concepts, I will try to illustrate with by completing a real life task using common word that everyone can understand. After the practice we will recap what just happened and link them with "GitHub wording". 
 
-This tutorial required to previous knowledge in computer science, we will use a few "shell commands" to execute some steps, you can just copy and run it. 
+This tutorial required to previous knowledge in computer science, we will use a few "shell commands" to execute some steps, you can just copy and run it.
+
+Each step will have 3 section: explanation, command to run and expected output. 
 
 # What is the example?
 A professor want to publish a paper with two of his students (Bob and Tom). And they decide do it in the GitHub way :) 
@@ -11,13 +13,13 @@ A professor want to publish a paper with two of his students (Bob and Tom). And 
 # What is the GitHub way?
 The are four important role in a typical GitHub workflow:
 
-**Owner:** In our case the professor is the owner，he have full control over the book and is the one to decide what content should be in the final version.
+**Owner:** In our case the professor is the owner，he has full control over the paper and is the one to decide what content should be in the final version.
 
-**Contributer:** The two students are contributer, they may work on some chapter together or separately, but any of their writings need to be review by professor before going into final version of the book.
+**Contributer:** The two students are contributers, they may work on some chapters together or separately, but any of their writings need to be reviewed by professor before they go into final version of the paper.
 
-**Remote copy:** A cloud storage that stores the final version of the book, in our case is GitHub.
+**Remote copy:** A cloud storage that stores the final version of the paper, in our case is GitHub.
 
-**Local copy:** Manuscript from professor and students, it is their draft version of the book and they can proofread each other's manuscript so that only the correct and best content goes into final version of the book.
+**Local copy:** Manuscript from professor and students, it is their draft version of the paper and they can proofread each other's manuscript so that only the correct and best content goes into final version of the paper.
 
 # Let's start
 
