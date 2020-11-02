@@ -1,16 +1,23 @@
+---
+title: "Old Git Guide"
+---
+
 # git-for-begineers-with-real-example
+
 The core idea begind git and GitHub isn't that complex. But one of the biggest blocker for people without computer science background to learn it is that it have so many new tech terms (e.g. repository, commits, pull request).
 
-Instead of diving deep into those terms and confuse you with all git concepts, I will try to illustrate with by completing a real life task using common word that everyone can understand. After the practice we will recap what just happened and link them with "GitHub wording". 
+Instead of diving deep into those terms and confuse you with all git concepts, I will try to illustrate with by completing a real life task using common word that everyone can understand. After the practice we will recap what just happened and link them with "GitHub wording".
 
 This tutorial required to previous knowledge in computer science, we will use a few "shell commands" to execute some steps, you can just copy and run it.
 
-Each step will have 3 section: explanation, command to run and expected output. 
+Each step will have 3 section: explanation, command to run and expected output.
 
 # What is the example?
-A professor want to publish a paper with two of his students (Bob and Tom). And they decide do it in the GitHub way :) 
+
+A professor want to publish a paper with two of his students (Bob and Tom). And they decide do it in the GitHub way :)
 
 # What is the GitHub way?
+
 The are four important role in a typical GitHub workflow:
 
 **Owner:** In our case the professor is the owner，he has full control over the paper and is the one to decide what content should be in the final version.
@@ -23,24 +30,25 @@ The are four important role in a typical GitHub workflow:
 
 # Let's start
 
-## 1. Professor create a GitHub storage 
+## 1. Professor create a GitHub storage
+
 **Professor:**
 
 Visit https://github.com/new, create a new "repository". (What is repository? Just image it as a remote cloud storage that store some txt files)
 
 ![](./images/newrepo.png)
 
-
 ## 2. Bob & Tom both setup their local copy
 
 We will run two set of commands separatly as Bob and Tom, to set up there local copy of the paper with git. The commands are alsmost identical, the only difference is the folder name for Bob & Tom:
-1. Run `mkdir` command to create two folder (using `mkdir` command) in our computer. This simulate Bob & Tom's separate working enviornment (in real life Bob & Tom will have their own computer and work separatly). 
+
+1. Run `mkdir` command to create two folder (using `mkdir` command) in our computer. This simulate Bob & Tom's separate working enviornment (in real life Bob & Tom will have their own computer and work separatly).
 2. Run `cd` command to go into the folder we just created.
 3. Run `git init` command to initialize git for current folder.
 4. Run `git config` to config name and email that will help identify who is making change (Bob/Tom)
-4. Run `git remote add ` command to link current folder with the remote storage created in previous step
-5. Run `git pull` command to get latest content from remote storage to your local folder.
-5. Run `git log`, you should see professor's Initial commit
+5. Run `git remote add ` command to link current folder with the remote storage created in previous step
+6. Run `git pull` command to get latest content from remote storage to your local folder.
+7. Run `git log`, you should see professor's Initial commit
 
 The exact command to run:
 **Bob:**
@@ -70,6 +78,7 @@ git log
 ```
 
 **Example of terminal output**
+
 ```
 jxh@jxh-mbp jiaxi % mkdir bob-computer
 jxh@jxh-mbp jiaxi % cd bob-computer
@@ -93,15 +102,15 @@ Date:   Thu Sep 24 22:15:16 2020 -0400
     Initial commit
 ```
 
-## 3. Professor add introduction section to GitHub 
+## 3. Professor add introduction section to GitHub
 
 **Professor:**
 
 Go to home page of the remote repository, click "Add files" -> "Create new file". Add a new file for introduction section of the paper:
 ![](./images/add_introduction.png)
 
+## 4. Bob work on first chapter
 
-## 4. Bob work on first chapter 
 1. Create `cp1.txt` file in folder bob-computer, enter `This is chp 1` in the file and save it
 2. Run `git status` command, you should see `cp1.txt` is under "untracked files"
 3. Run `git add` command to start tracking the change for `cp1.txt`
@@ -118,6 +127,7 @@ git log
 ```
 
 **Example of terminal output**
+
 ```
 jxh@jxh-mbp bob-computer % git status
 Untracked files:
@@ -144,6 +154,7 @@ Date:   Thu Sep 24 22:15:16 2020 -0400
 ```
 
 ## 5. Bob submit review request for his first chapter
+
 1. Run `git push` command to push Bob's change to remote storage as a new "branch"
 2. Submit request to merge the new change into master branch
 
@@ -154,6 +165,7 @@ git push origin master:cp1
 ```
 
 **Example of terminal output**
+
 ```
 jxh@jxh-mbp bob-computer % git push origin master:cp1
 Enumerating objects: 6, done.
@@ -172,13 +184,14 @@ To https://github.com/henryhoo/Awesome-Paper
 
 ![](./images/bob_pull_request.png)
 
-## 6. Professor provide feedback and ask for change 
+## 6. Professor provide feedback and ask for change
 
 Professor check out the request but is not fully satisfied with Bob's work, he provide some feedback in comments
 
 ![](./images/professor_comment.png)
 
 ## 7. Bob make changes based on feedback and his review request
+
 1. Change `cp1.txt` content to "This is chpater 1"
 2. Run `git commit --amend` to save latest change to current commit
 3. Run `git push` again to update remote branch
@@ -191,6 +204,7 @@ git push origin master:cp1
 ```
 
 **Example of terminal output**
+
 ```
 jxh@jxh-mbp bob-computer % git commit --amend
  Date: Sat Sep 26 19:22:49 2020 -0400
@@ -211,8 +225,8 @@ To https://github.com/henryhoo/Awesome-Paper
  * [new branch]      master -> cp1
 ```
 
-
 ## 8. Professor approved the request and merge Bob's work into GitHub
+
 Professor is happy with Bob's change now, and merged his change to the paper
 ![](./images/merged_bob_request.png)
 

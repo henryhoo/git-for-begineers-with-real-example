@@ -1,7 +1,8 @@
+---
+title: "How to learn CS"
+---
 
-
-
-
+# How to learn CS
 
 ## Run code
 
@@ -9,4 +10,4 @@
 
 ## Search documents
 
-## 
+##
