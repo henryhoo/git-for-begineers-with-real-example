@@ -100,6 +100,7 @@ Initialized empty Git repository in /Users/jxh/Documents/jiaxi/learnGit/.git/
 
 We will create a new file _learnGit_ folder and add it as first commit in Git
 
+- `echo` append some text contents to a file
 - `git status` command to check current status of the folder, we will see our new file under untracked files
 - `git add` command to start tracking the new file, this means any change to this file will be recorded in Git
 - `git commit` command to make our first commit, which includes our changes to the new file.
@@ -325,6 +326,16 @@ this is V1 content
 
 ## Recap
 
-Wow~~ We finished our first tutorial! In this section we learn to set up Git enviornoment on our laptop, created our first local repository, recorded file changes as commits and learnt to switch between different commits
+Wow~~ We finished our first tutorial! In this section we learn to set up Git enviornoment on our laptop, created our first local repository, recorded file changes as commits and learnt to switch between different commits.
+
+The Git command we have used so far
+
+- `git status`
+- `git diff`
+- `git log`
+- `git add`
+- `git commit`
+- `git status`
+- `git checkout`
 
 In next section we will learn to how to upload our local changes to remote repository GitHub and work with others.
