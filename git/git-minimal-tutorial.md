@@ -1,5 +1,6 @@
 ---
 title: "Git Minimal Startup Guide"
+order: 1
 ---
 
 # Git Minimal Startup Guide
